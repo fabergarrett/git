@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLSequenceAllInOne</id>
+    <coordinates>
+      <x>0</x>
+      <y>20</y>
+      <w>740</w>
+      <h>670</h>
+    </coordinates>
+    <panel_attributes>title=Leave a Message
+obj=_:Telephone_~a
+obj=_:Connection_~b
+obj=_:MailSystem_~c
+obj=_:Mailbox_~d 
+obj=_:Message_~e CREATED_LATER
+
+on=a
+a-&gt;b : dial; on=b
+b-&gt;c : findMailbox; on=c
+off=c
+b-&gt;d : getGreeting; on=d
+off=d
+b-&gt;a : speak; on=a
+off=a
+off=b
+a-&gt;b : record; on=b
+off=b
+a-&gt;b : hangup; on=b
+b-&gt;e : new Message
+b-&gt;d : addMessage; on=d
+off=d
+off=b
+off=a
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
